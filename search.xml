@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F07%2F14%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" ssr://MTAzLjEzNS4yNDkuMTI0OjY2NjphdXRoX2NoYWluX2E6Y2hhY2hhMjA6aHR0cF9zaW1wbGU6U2pKd2JWTmovP29iZnNwYXJhbT1PVE13TnpReE56QTJMbTFwWTNKdmMyOW1kQzVqYjIwJnByb3RvcGFyYW09TVRjd05qcFJhR1kxVmpBJnJlbWFya3M9NmFhWjVyaXZJRVl0UTA0eUxVNWxkR1pzYVhnSiZncm91cD01THlZNVpPQjVwNkI2WUNm More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment asdasdadasdsadas]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[今天天气不错]]></title>
+    <url>%2F2019%2F07%2F04%2F%E4%BB%8A%E5%A4%A9%E5%A4%A9%E6%B0%94%E4%B8%8D%E9%94%99%2F</url>
+    <content type="text"><![CDATA[天气不错你聚的聂 安师大收到]]></content>
+      <categories>
+        <category>心情</category>
+      </categories>
+      <tags>
+        <tag>sadasdas</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[nihao]]></title>
     <url>%2F2019%2F06%2F24%2Fnihao%2F</url>
     <content type="text"></content>
@@ -14,10 +30,5 @@
     <title><![CDATA[第一天]]></title>
     <url>%2F2019%2F06%2F08%2F%E7%AC%AC%E4%B8%80%E5%A4%A9%2F</url>
     <content type="text"><![CDATA[天气不错 print hello 1 2 3 31 ​ 你觉得怎么样 [TOC]]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F06%2F08%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment asdasdadasdsadas]]></content>
   </entry>
 </search>
