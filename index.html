@@ -1,52 +1,151 @@
+
 <!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="zh-CN">
 
-  <title>xiangcai's ackyard, yes!</title><!-- Begin Jekyll SEO tag v2.8.0 -->
-<meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="xiangcai’s ackyard, yes!" />
-<meta name="author" content="yunpeng.zhan" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="日々私たちが过ごしている日常は、実は、奇迹の连続なのかもしれな." />
-<meta property="og:description" content="日々私たちが过ごしている日常は、実は、奇迹の连続なのかもしれな." />
-<link rel="canonical" href="https://runningzyp.github.io/" />
-<meta property="og:url" content="https://runningzyp.github.io/" />
-<meta property="og:site_name" content="xiangcai’s ackyard, yes!" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="xiangcai’s ackyard, yes!" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"yunpeng.zhan"},"description":"日々私たちが过ごしている日常は、実は、奇迹の连続なのかもしれな.","headline":"xiangcai’s ackyard, yes!","name":"xiangcai’s ackyard, yes!","url":"https://runningzyp.github.io/"}</script>
-<!-- End Jekyll SEO tag -->
-<link type="application/atom+xml" rel="alternate" href="https://runningzyp.github.io/feed.xml" title="xiangcai&apos;s ackyard, yes!" /><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-  <link rel="stylesheet" href="/assets/css/main.css" />
-</head><body a="auto">
-    <main class="page-content" aria-label="Content">
-      <div class="w">
-        <header>
-  <h1>xiangcai's ackyard, yes!</h1><p>日々私たちが过ごしている日常は、実は、奇迹の连続なのかもしれな.</p></header><ul><li>welcome to</li><ul><li>a (nearly) no-CSS, fast, minimalist Jekyll theme.</li><li><a href="https://github.com/runningzyp">github repo</a></li><li>used by <a href='https://www.xiangcaihua.com'> xiangcai</a> and <a href=''>many others</a></li></ul><li>all posts</li><ul><li>
-          <span>2020-07-09</span>
-          <a href="/example/2020/07/09/hr-example.html">post example with hr</a>
-        </li><li>
-          <span>2020-07-09</span>
-          <a href="/example/2020/07/09/post-example-with-headings-and-toc.html">post example with headings and toc</a>
-        </li><li>
-          <span>2020-07-08</span>
-          <a href="/example/2020/07/08/very-very-very-long-title-and-very-very-very-short-content.html">very very very long title and very very very short content</a>
-        </li><li>
-          <span>2020-07-08</span>
-          <a href="/example/2020/07/08/language-tests.html">language tests</a>
-        </li><li>
-          <span>2020-07-07</span>
-          <a href="/example/2020/07/07/overview-post.html">overview post</a>
-        </li><li>
-          <span>2020-07-06</span>
-          <a href="/test/2020/07/06/strange-post.html">strange post</a>
-        </li></ul><li>posts by category</li><ul><li><a href="category-心情">心情</a></li></ul><li><a href="feed.xml">rss</a></li><li><a href="about">about</a></li></ul>
+<head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name='description' content='The less formal CSS framework.'>
+    <meta name='author' content='Rhyneav and PaperCSS contributors.'>
 
-      </div>
-    </main>
-  </body>
+    <link rel='shortcut icon' href="assets/static/my.ico" type='image/x-icon'>
+    <title>香菜的后花园 | xiangcai </title>
+
+    <link rel="stylesheet" type="text/css" href="assets/static/custom/css/paper.css" />
+    <link rel="stylesheet" type="text/css" href="assets/static/custom/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="assets/static/custom/css/syntax.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/static/my.ico">
+    <link rel="stylesheet" type="text/css" href="assets/static/custom/css/font.css" />
+
+    <style>
+        /* 礼花效果的样式 */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ffcc00;
+            border-radius: 50%;
+            animation: explode 1s ease-out forwards;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        @keyframes explode {
+            0% {
+                transform: scale(0.5);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(var(--x), var(--y)) scale(0.5);
+                opacity: 0;
+            }
+        }
+
+        /* 聚光灯效果 */
+        .spotlight {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9998;
+            overflow: hidden;
+        }
+
+        .spotlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            /* 光的宽度 */
+            height: 300px;
+            /* 光的高度 */
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+            transform: translate(-50%, -50%);
+            animation: spotlightAnimation 2s linear forwards;
+        }
+
+        /* 聚光灯移动效果 */
+        @keyframes spotlightAnimation {
+            0% {
+                transform: translate(0, 0) scale(3);
+                /* 从左上角大面积射出 */
+            }
+
+            100% {
+                transform: translate(50vw, 50vh) scale(0.3);
+                /* 聚焦到屏幕中央 */
+            }
+        }
+
+        /* 页面整体变暗 */
+        .dark-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+            z-index: 9997;
+        }
+
+        .key {
+            margin: 10px;
+            font-size: 20px;
+            padding: 10px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="row flex-center">
+        <div class='sm-12 col'></div>
+
+        <div class='sm-12 md-8 col'>
+            <div class='paper paper-btn' style="display:block">
+                <div class='demo-title'>
+                    <div class='row flex-center'>
+                        <div class='text-center'>
+                            <h1>Xiangcai' Backyard</h1>
+                            <p style="font-family: hymh-for-index;">我们所经历的每个平凡的 <strong>日常</strong>,也许就是连续发生的
+                                <strong>奇迹</strong>. <br>
+                                ——日々私たちが过ごしている日常は、実は、奇迹の连続なのかもしれな.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row flex-center child-borders piano-keys">
+                        <button class='paper-btn margin badge primary key' style="color: white;" data-key="a">A</button>
+                        <button class='paper-btn margin badge secondary key' style="color: white;"
+                            data-key="s">S</button>
+                        <button class='paper-btn margin badge success key' style="color: white;" data-key="d">D</button>
+                        <button class="paper-btn margin badge warning key" style="color: white;" data-key="f">F</button>
+                        <button class="paper-btn margin badge danger key" style="color: white;" data-key="g">G</button>
+                        <button class="paper-btn margin badge muted key" style="color: white;" data-key="h">H</button>
+                        <button class="paper-btn margin badge light key" style="color: black;" data-key="j">J</button>
+                    </div>
+                </div>
+                <div class="section"></div>
+                <div class='row flex-center'>
+                    <div class='text-center'>
+                        <a href="https://beian.miit.gov.cn/"
+                            style="background-image:none;font-size: 10px;color: #41403e;"
+                            target="_blank">豫ICP备18022169号-1 ©
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入 JavaScript 文件 -->
+    <script src="assets/static/custom/js/piano.js"></script>
+    <script src="assets/static/custom/js/effects.js"></script>
+</body>
+
 </html>
