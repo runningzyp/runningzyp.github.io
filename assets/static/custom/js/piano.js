@@ -42,6 +42,7 @@ const playTune = (key) => {
 
     // 添加点击效果
     clickedKey.classList.add("active");
+    triggerRandomEffect(key.toUpperCase()); // 触发随机效果
     setTimeout(() => {
         clickedKey.classList.remove("active");
     }, 150);

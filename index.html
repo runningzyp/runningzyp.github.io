@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -19,6 +18,11 @@
 
     <style>
         /* 礼花效果的样式 */
+        .button-hover {
+            transform: translate3d(0, 2px, 0);
+            box-shadow: 2px 8px 8px -5px rgba(0, 0, 0, 0.3);
+        }
+
         .confetti {
             position: absolute;
             width: 10px;
@@ -120,14 +124,20 @@
                         </div>
                     </div>
                     <div class="row flex-center child-borders piano-keys">
-                        <button class='paper-btn margin badge primary key' style="color: white;" data-key="a">A</button>
-                        <button class='paper-btn margin badge secondary key' style="color: white;"
+                        <button id="A" class='paper-btn margin badge primary key' style="color: white;"
+                            data-key="a">A</button>
+                        <button id="S" class='paper-btn margin badge secondary key' style="color: white;"
                             data-key="s">S</button>
-                        <button class='paper-btn margin badge success key' style="color: white;" data-key="d">D</button>
-                        <button class="paper-btn margin badge warning key" style="color: white;" data-key="f">F</button>
-                        <button class="paper-btn margin badge danger key" style="color: white;" data-key="g">G</button>
-                        <button class="paper-btn margin badge muted key" style="color: white;" data-key="h">H</button>
-                        <button class="paper-btn margin badge light key" style="color: black;" data-key="j">J</button>
+                        <button id="D" class='paper-btn margin badge success key' style="color: white;"
+                            data-key="d">D</button>
+                        <button id="F" class="paper-btn margin badge warning key" style="color: white;"
+                            data-key="f">F</button>
+                        <button id="G" class="paper-btn margin badge danger key" style="color: white;"
+                            data-key="g">G</button>
+                        <button id="H" class="paper-btn margin badge muted key" style="color: white;"
+                            data-key="h">H</button>
+                        <button id="J" class="paper-btn margin badge light key" style="color: black;"
+                            data-key="j">J</button>
                     </div>
                 </div>
                 <div class="section"></div>
