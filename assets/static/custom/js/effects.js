@@ -19,7 +19,13 @@ const triggerConfetti = (s) => {
         confettiContainer.appendChild(confetti);
     }
 
-    setTimeout(() => confettiContainer.classList.remove('button-hover'), 200); // 礼花效果持续 1 秒
+    setTimeout(() => {
+        confettiContainer.classList.remove('button-hover');
+        while (confettiContainer.childElementCount) {
+            confettiContainer.removeChild(confettiContainer.lastChild);
+        };
+
+    }, 200); // 礼花效果持续 1 秒
 };
 
 
